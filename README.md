@@ -45,7 +45,7 @@ docker-compose exec vue-service sh -c 'yarn install' && \
 docker-compose exec vue-service sh -c 'yarn serve'
 ```
 
-Then open [http://localhost:8080/flower-stuff-easy-web/](http://localhost:8080/flower-stuff-easy-web/)
+Then open [http://localhost:8080/flower-stuff-easy-web-vue/](http://localhost:8080/flower-stuff-easy-web-vue/)
 
 ### 5. Up flower-stuff-easy-web-django
 
