@@ -6,6 +6,7 @@ services:
     build: ./vue-container
     ports:
       - 8080:8080
+    # systemctl を有効にするもの。
     privileged: true
     # tty, stdin_open しておくと exec するときに -it がいらないみたい。
     tty: true
@@ -14,3 +15,18 @@ services:
     volumes:
       - ./app/flower-stuff-easy-web-vue:/app
 
+  django-service:
+    container_name: django-container
+    build: ./django-container
+    ports:
+      - 8000:8000
+    # systemctl を有効にするもの。
+    privileged: true
+    # tty, stdin_open しておくと exec するときに -it がいらないみたい。
+    tty: true
+    stdin_open: true
+    command: /bin/sh
+    volumes:
+      - ./app/flower-stuff-easy-web-django:/app
+    environment:
+      - SECRET_KEY=foobarbaz
