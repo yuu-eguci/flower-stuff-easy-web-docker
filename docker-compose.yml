@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  vue-service:
+    container_name: vue-container
+    build: ./vue-container
+    ports:
+      - 8080:8080
+    privileged: true
+    # tty, stdin_open しておくと exec するときに -it がいらないみたい。
+    tty: true
+    stdin_open: true
+    command: /bin/sh
+    volumes:
+      - ./app/flower-stuff-easy-web-vue:/app
+
