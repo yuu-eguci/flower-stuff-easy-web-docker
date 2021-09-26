@@ -21,6 +21,7 @@ Start it.
 ### 2. Clone Vue and Django repositories
 
 ```bash
+mkdir app && \
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-vue.git ./app/flower-stuff-easy-web-vue && \
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django-sample.git ./app/flower-stuff-easy-web-django
 ```
