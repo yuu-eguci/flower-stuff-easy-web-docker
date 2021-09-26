@@ -44,6 +44,8 @@ docker-compose exec vue-service sh -c 'yarn serve'
 
 ### 5. Up flower-stuff-easy-web-django
 
+In **another terminal**
+
 ```bash
 docker-compose exec django-service sh -c 'pipenv install' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py migrate' && \
