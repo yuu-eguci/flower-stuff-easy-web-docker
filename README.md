@@ -13,12 +13,15 @@ flower-stuff-easy-web-docker
 ### Prerequisites
 
 - Docker Desktop([https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop))
+- Clone this repository itself
 
 ### 1. Start Docker Desktop
 
 Start it.
 
 ### 2. Clone Vue and Django repositories
+
+Run commands below in flower-stuff-easy-web-docker repository.
 
 ```bash
 mkdir app && \
