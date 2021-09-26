@@ -34,7 +34,7 @@ TODO: flower-stuff-easy-web-django が用意できたら、 sample 部分を変�
 docker-compose up -d
 ```
 
-### 4. Up  flower-stuff-easy-web-vue
+### 4. Up flower-stuff-easy-web-vue
 
 ```bash
 docker-compose exec vue-service sh -c 'yarn install' && \
@@ -47,4 +47,10 @@ docker-compose exec vue-service sh -c 'yarn serve'
 docker-compose exec django-service sh -c 'pipenv install' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py migrate' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 0.0.0.0:8000'
+```
+
+### 6. Finish development
+
+```bash
+docker-compose down
 ```
