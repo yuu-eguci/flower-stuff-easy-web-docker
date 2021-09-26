@@ -42,6 +42,8 @@ docker-compose exec vue-service sh -c 'yarn install' && \
 docker-compose exec vue-service sh -c 'yarn serve'
 ```
 
+Then open [http://localhost:8080/](http://localhost:8080/)
+
 ### 5. Up flower-stuff-easy-web-django
 
 In **another terminal**
@@ -51,6 +53,8 @@ docker-compose exec django-service sh -c 'pipenv install' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py migrate' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 0.0.0.0:8000'
 ```
+
+Then open [http://localhost:8000/](http://localhost:8000/)
 
 ### 6. Finish development
 
