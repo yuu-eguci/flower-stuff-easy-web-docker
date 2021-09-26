@@ -6,7 +6,7 @@ flower-stuff-easy-web-docker
  🐳 Dev environment for flower-stuff-easy-web project. It starts Vue and Django projects in Docker containers.
 
 - flower-stuff-easy-web-vue([https://github.com/yuu-eguci/flower-stuff-easy-web-vue](https://github.com/yuu-eguci/flower-stuff-easy-web-vue))
-- flower-stuff-easy-web-django([]())
+- flower-stuff-easy-web-django([https://github.com/yuu-eguci/flower-stuff-easy-web-django](https://github.com/yuu-eguci/flower-stuff-easy-web-django))
 
 ## Installation
 
@@ -22,8 +22,10 @@ Start it.
 
 ```bash
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-vue.git ./app/flower-stuff-easy-web-vue && \
-git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django.git ./app/flower-stuff-easy-web-django
+git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django-sample.git ./app/flower-stuff-easy-web-django
 ```
+
+TODO: flower-stuff-easy-web-django が用意できたら、 sample 部分を変更する。
 
 ### 3. Start docker containers
 
