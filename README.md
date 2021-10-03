@@ -52,7 +52,7 @@ Then open [http://localhost:8080/flower-stuff-easy-web-vue/](http://localhost:80
 In **another terminal**
 
 ```bash
-docker-compose exec django-service sh -c 'pipenv install' && \
+docker-compose exec django-service sh -c 'pipenv run pip install -r requirements.txt' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py migrate' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 0.0.0.0:8000'
 ```
