@@ -1,8 +1,8 @@
-FROM python:3.7-alpine
+FROM python:3.8.12-slim-buster
 
 WORKDIR /app
 
-RUN apk update && \
+RUN apt update && \
     pip install --upgrade pip && \
     pip install pipenv
 
