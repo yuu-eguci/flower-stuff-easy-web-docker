@@ -62,3 +62,21 @@ Then open [http://localhost:8000/](http://localhost:8000/)
 ```bash
 docker-compose down
 ```
+
+## tips for django
+
+### .env
+
+```
+APP_HDF5_DRIVE_ID = '***'
+APP_HDF5_VERSION = '2.0.0'
+APP_PINCODE = '***'
+DJANGO_SECRET_KEY = '***'
+DISABLE_COLLECTSTATIC = 1
+```
+
+### Command
+
+```bash
+docker-compose exec django-service sh -c 'pipenv run python ./app/download_hdf5.py'
+```
