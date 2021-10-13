@@ -31,10 +31,9 @@ Start it.
 
 ```bash
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-docker.git && \
-mkdir ./flower-stuff-easy-web-docker/app && \
+cd flower-stuff-easy-web-docker && \
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-vue.git ./app/flower-stuff-easy-web-vue && \
-git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django.git ./app/flower-stuff-easy-web-django && \
-cd flower-stuff-easy-web-docker
+git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django.git ./app/flower-stuff-easy-web-django
 ```
 
 ### 3. Up docker containers
