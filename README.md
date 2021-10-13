@@ -13,23 +13,27 @@ flower-stuff-easy-web-docker
 ### Prerequisites
 
 - Docker Desktop([https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop))
-- Clone this repository itself
+- Assure that you can connect to GitHub using SSH ([https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent))
+
+If your machine is Windows ...
+
+- Git Bash ([https://gitforwindows.org/](https://gitforwindows.org/))
 
 ### 1. Start Docker Desktop
 
 Start it.
 
-### 2. Clone Vue and Django repositories
-
-Run commands below in flower-stuff-easy-web-docker repository.
+### 2. Clone relevant repositories this repository
 
 ```bash
-mkdir app && \
+git clone git@github.com:yuu-eguci/flower-stuff-easy-web-docker.git && \
+mkdir ./flower-stuff-easy-web-docker/app && \
 git clone git@github.com:yuu-eguci/flower-stuff-easy-web-vue.git ./app/flower-stuff-easy-web-vue && \
-git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django.git ./app/flower-stuff-easy-web-django
+git clone git@github.com:yuu-eguci/flower-stuff-easy-web-django.git ./app/flower-stuff-easy-web-django && \
+cd flower-stuff-easy-web-docker
 ```
 
-### 3. Start docker containers
+### 3. Up docker containers
 
 ```bash
 # In flower-stuff-easy-web-docker repository.
@@ -43,8 +47,6 @@ docker-compose exec vue-service sh -c 'yarn install' && \
 docker-compose exec vue-service sh -c 'yarn serve'
 ```
 
-Then open [http://localhost:8080/flower-stuff-easy-web-vue/](http://localhost:8080/flower-stuff-easy-web-vue/)
-
 ### 5. Up flower-stuff-easy-web-django
 
 In **another terminal**
@@ -55,25 +57,17 @@ docker-compose exec django-service sh -c 'pipenv install' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 0.0.0.0:8000'
 ```
 
-Then open [http://localhost:8000/](http://localhost:8000/)
+### 6. Open web page
 
-### 6. Finish development
+- [http://localhost:8080/flower-stuff-easy-web-vue/](http://localhost:8080/flower-stuff-easy-web-vue/)
+
+### 7. Finish development
 
 ```bash
 docker-compose down
 ```
 
 ## tips for django
-
-### .env
-
-```
-APP_HDF5_DRIVE_ID = '***'
-APP_HDF5_VERSION = '2.0.0'
-APP_PINCODE = '***'
-DJANGO_SECRET_KEY = '***'
-DISABLE_COLLECTSTATIC = 1
-```
 
 ### Command
 
