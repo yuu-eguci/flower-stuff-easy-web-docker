@@ -57,6 +57,7 @@ In **another terminal**
 ```bash
 # Although already run "pipenv install" in Dockerfile, run this again for new libraries added.
 docker-compose exec django-service sh -c 'pipenv install' && \
+docker-compose exec django-service sh -c 'pipenv run python ./app/download_hdf5.py' && \
 docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 0.0.0.0:8000'
 ```
 
@@ -68,12 +69,4 @@ docker-compose exec django-service sh -c 'pipenv run python manage.py runserver 
 
 ```bash
 docker-compose down
-```
-
-## tips for django
-
-### Command
-
-```bash
-docker-compose exec django-service sh -c 'pipenv run python ./app/download_hdf5.py'
 ```
