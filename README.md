@@ -55,6 +55,7 @@ docker-compose exec vue-service sh -c 'yarn serve'
 In **another terminal**
 
 ```bash
+cd flower-stuff-easy-web-docker && \
 # Although already run "pipenv install" in Dockerfile, run this again for new libraries added.
 docker-compose exec django-service sh -c 'pipenv install' && \
 docker-compose exec django-service sh -c 'pipenv run python ./app/download_hdf5.py' && \
