@@ -3,6 +3,8 @@ flower-stuff-easy-web-docker
 
 ![](https://img.shields.io/badge/-Python-F9DC3E.svg?logo=python&style=for-the-badge) ![](https://img.shields.io/badge/-Django-092E20.svg?logo=django&style=for-the-badge) ![](https://img.shields.io/badge/-Vue.js-96FF33.svg?logo=vue.js&style=for-the-badge) ![](https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=for-the-badge) ![](https://img.shields.io/badge/-Github-181717.svg?logo=github&style=for-the-badge) ![](https://img.shields.io/badge/-Azure%20App%20Service-0078D7.svg?logo=azure-devops&style=for-the-badge) ![](https://img.shields.io/badge/-Linux-000000.svg?logo=linux&style=for-the-badge)
 
+![flower-stuff-easy-web トップ画像](https://user-images.githubusercontent.com/28250432/137093980-3fdaa06d-7bde-4d89-b65b-de49a2a0fe01.png)
+
 ## Description
 
  🐳 Dev environment for flower-stuff-easy-web project. It starts Vue and Django projects in Docker containers.
