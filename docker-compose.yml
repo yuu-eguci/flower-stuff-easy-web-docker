@@ -29,4 +29,8 @@ services:
     volumes:
       - ./app/flower-stuff-easy-web-django:/app
     environment:
-      - SECRET_KEY=foobarbaz
+      - APP_HDF5_DRIVE_ID=10PjbaGKUoNs1a0vPkAZ5z4Inl-ioaW6c
+      - APP_HDF5_VERSION=2.0.0
+      - APP_PINCODE=1234
+      - DJANGO_SECRET_KEY=django-insecure-xxxxx
+      - DISABLE_COLLECTSTATIC=1
