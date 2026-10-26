@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   vue-service:
     container_name: vue-container
@@ -18,6 +16,7 @@ services:
   django-service:
     container_name: django-container
     build: ./django-container
+    platform: linux/amd64
     ports:
       - 8000:8000
     # systemctl を有効にするもの。
