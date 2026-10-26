@@ -16,7 +16,7 @@ flower-stuff-easy-web-docker
 
 ### Prerequisites
 
-- Docker Desktop([https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)) with Docker Compose v2 (`docker compose`)
+- Docker Desktop([https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)) with the Docker Compose plugin (`docker compose`)
 - Assure that you can connect to GitHub using SSH ([https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent](https://docs.github.com/ja/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent))
 
 If your machine is Windows ...
