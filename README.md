@@ -78,6 +78,24 @@ docker compose exec django-service sh -c 'pipenv run python manage.py runserver 
 docker compose down
 ```
 
+## Smoke test
+
+After step 2, you can check that the environment works with one command.
+
+```bash
+# In flower-stuff-easy-web-docker repository.
+./scripts/smoke-test.sh
+```
+
+It lints the Dockerfiles with hadolint, builds and starts the containers, and runs these checks:
+
+- flower-stuff-easy-web-vue: `yarn install --frozen-lockfile`, `yarn lint`, `yarn test:unit`
+- flower-stuff-easy-web-django: `pipenv install --deploy`, `manage.py check`
+
+The containers keep running after the script finishes. Stop them with `docker compose down`.
+
+The same script runs in GitHub Actions (`.github/workflows/smoke-test.yml`) when Actions is enabled for this repository.
+
 ## Notes on pinned versions
 
 The related repositories have not changed since 2021, so the containers pin versions that match them.
