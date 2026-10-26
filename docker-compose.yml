@@ -3,9 +3,7 @@ services:
     container_name: vue-container
     build: ./vue-container
     ports:
-      - 8080:8080
-    # systemctl を有効にするもの。
-    privileged: true
+      - 127.0.0.1:8080:8080
     # tty, stdin_open しておくと exec するときに -it がいらないみたい。
     tty: true
     stdin_open: true
@@ -18,15 +16,14 @@ services:
     build: ./django-container
     platform: linux/amd64
     ports:
-      - 8000:8000
-    # systemctl を有効にするもの。
-    privileged: true
+      - 127.0.0.1:8000:8000
     # tty, stdin_open しておくと exec するときに -it がいらないみたい。
     tty: true
     stdin_open: true
     command: /bin/sh
     volumes:
       - ./app/flower-stuff-easy-web-django:/app
+    # APP_PINCODE と DJANGO_SECRET_KEY はローカル開発専用のダミー値です。ほかの環境では使用しないでください。
     environment:
       - APP_HDF5_DRIVE_ID=10PjbaGKUoNs1a0vPkAZ5z4Inl-ioaW6c
       - APP_HDF5_VERSION=2.0.0

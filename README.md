@@ -96,6 +96,11 @@ The containers keep running after the script finishes. Stop them with `docker co
 
 The same script runs in GitHub Actions (`.github/workflows/smoke-test.yml`) when Actions is enabled for this repository.
 
+## Security notes
+
+- The containers publish ports on `127.0.0.1` only, because Django runs with `DEBUG=True`. Other devices on your network cannot open the app.
+- `DJANGO_SECRET_KEY` and `APP_PINCODE` in `docker-compose.yml` are placeholders for local development. Do not reuse them anywhere else.
+
 ## Notes on pinned versions
 
 The related repositories have not changed since 2021, so the containers pin versions that match them.
