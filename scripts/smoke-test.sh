@@ -14,7 +14,6 @@ for dockerfile in vue-container/Dockerfile django-container/Dockerfile; do
   docker run --rm -i hadolint/hadolint:v2.12.0 < "$dockerfile"
 done
 
-docker compose config --quiet
 docker compose up --detach --build
 
 docker compose exec -T vue-service sh -c 'yarn install --frozen-lockfile && yarn lint && yarn test:unit'
